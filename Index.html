@@ -1,0 +1,60 @@
+
+<style>
+    body {
+        background-color: #CDC1FF;
+        text-align: center; /* Centra el contenido horizontalmente */
+        font-family: Arial, sans-serif; /* Fuente por defecto para el cuerpo */
+    }
+    h1 {
+        font-family: 'Times New Roman', Times, serif; /* Fuente para el título principal */
+    }
+    h2 {
+        font-family: 'Courier New', Courier, monospace; /* Fuente para el subtítulo */
+    }
+    h3 {
+        font-family: 'Georgia', serif; /* Fuente para el tercer título */
+    }
+    input, button {
+        font-family: Verdana, Geneva, sans-serif; /* Fuente para los inputs y botones */
+    }
+</style>
+</head>
+<body>
+    <img src="https://th.bing.com/th/id/OIP.ZWAqtfXAo9q5j5ELgxgkCwAAAA?rs=1&pid=ImgDetMain" alt="Logo del tec" class="centered-image" width="150" height="auto">
+
+    <h1>Tecnologico de Martínez de la Torre</h1>
+    <h2>Ing. en Sistemas Computacionales</h2>
+    <h3>Ingreso:</h3>
+    Nombre:<input type="text" name="usuario" id="usuario"><br>
+
+Correo:<input type="email" name="correo" id="correo"><br>
+Contraseña:<input type="password" name="contrasena" id="contrasena"><br>
+<button class="mi-boton" onclick="ingresar()">Ingresar</button>
+<script>
+    function ingresar() {
+        const usuario = document.getElementById('usuario').value;
+        const correo = document.getElementById('correo').value;
+        const contrasena = document.getElementById('contrasena').value;
+        
+        const contrasenaCorrecta = "5gatitos"; 
+
+        if (!usuario) {
+            alert("Por favor, ingrese un nombre de usuario.");
+            return;
+        }
+
+        if (!correo) {
+            alert("Por favor, ingrese un correo electrónico.");
+            return;
+        }
+
+        if (contrasena === contrasenaCorrecta) {
+            alert(Usuario: ${usuario}\nCorreo: ${correo}\nContraseña: ${contrasena});
+            window.location.href = "http://177.229.210.98:8081/moodle/my/"; 
+        } else {
+            alert("Contraseña incorrecta. Por favor, inténtelo de nuevo.");
+        }
+    }
+</script>
+</body>
+</html>

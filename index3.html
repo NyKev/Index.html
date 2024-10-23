@@ -1,0 +1,29 @@
+<a href="formulario.html">formulario</a>
+<a href="movimiento.html">movimiento</a>
+
+<html>
+    <head>
+        <script>
+            function mueve(obj, dir) {
+                if (dir == "izq") {
+                    obj.style.left = (parseInt(obj.style.left) || 0) - 10 + 'px';
+                } else if (dir == "der") {
+                    obj.style.left = (parseInt(obj.style.left) || 0) + 10 + 'px';
+                }
+            }
+        </script>
+        <style>
+            div {
+                position: relative;
+            }
+        </style>
+    </head>
+    <body> 
+        <div onclick="mueve(this, 'izq')" oncontextmenu="mueve(this, 'der'); return false;" style="width: 100px; height: 100px; background-color: rgb(232, 187, 241);" id="primerobjecto">
+            x 
+        </div>
+        <div onclick="mueve(this, 'izq')" oncontextmenu="mueve(this, 'der'); return false;" style="width: 100px; height: 100px; background-color: rgb(187, 221, 241);" id="segundoobjecto">
+        y
+        </div>
+    </body>
+</html>
